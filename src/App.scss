@@ -1,0 +1,48 @@
+@use './index.scss';
+@use './components/table/Table.scss';
+@use './components/buttons/Button.scss';
+
+.App {
+    text-align: center;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.show {
+    display: block;
+    // transform: translateY(-5vh); // why does this makes the tbody text blurry when scrollbar appears?
+    // transition-property: transform;
+    margin-top: -32px;
+    transition-property: margin;
+    transition-delay: 0.1s;
+    transition-duration: 1s;
+}
+
+.hideMeAfter5Seconds {
+    display: block;
+    animation: hideAnimation ease 6s;
+    visibility: hidden; 
+  }
+  
+@keyframes hideAnimation {
+    0% {opacity: 1;visibility: visible;}
+    50% {opacity: 1;visibility: visible;}
+    100% {opacity: 0;visibility: visible;}
+}

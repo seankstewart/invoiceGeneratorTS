@@ -1,0 +1,154 @@
+table {
+    margin: 0 auto;
+    background-color: #E3E3E3;
+    border-collapse: separate;
+    border-spacing: 1px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+th, td {
+    position: relative;
+    text-align: left;
+    padding-top: 0.2rem;
+    padding-right: 0.25rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.25rem;
+    background-color: white;
+}
+
+tr:nth-child(even) td {
+    background-color: #EEEEEE;
+}
+
+th {
+    font-size: .6rem;
+    font-weight: 700;
+}
+
+.table-form {
+    box-sizing: border-box;
+    font-size: 0.75rem;
+    margin: 0 2.5rem;
+
+    p {
+        display: block;
+        margin: 0;
+    }
+
+    label {
+        display: none;
+        position: absolute;
+        margin-top: 0.2rem;
+        margin-left: 0.25rem;
+        font-size: 0.75rem;
+        color: #CCCCCC;
+    }
+
+    input {
+        width: 90%;
+        padding: 0;
+        margin: 0;
+    }
+
+    select {
+        padding: 0;
+        margin: 0;
+    }
+
+    button {
+        margin-top: 0.2rem;
+        margin-right: 0.25rem;
+        margin-bottom: 0.2rem;
+        margin-left: 0.25rem;
+    }
+}
+
+
+// scrollable tbody
+.table-form {
+    height: calc(100% - 35vh);
+    
+    table {
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    thead {
+        th {
+            border: none;
+            background: #e3e3e3;
+
+            &:nth-child(1) {
+                width: 1%;
+                &::before {
+                    visibility: hidden;
+                    content: 'aa';
+                    color: transparent
+                }
+            }
+            &:nth-child(2) {
+                width: 20%;
+            }
+            &:nth-child(3) {
+                width: 20%;
+            }
+            &:nth-child(4) {
+                width: 15%;
+            }
+            &:nth-child(5) {
+                width: 10%;
+            }
+            &:nth-child(6) {
+                width: 16%;
+            }
+            &:nth-child(7) {
+                width: 16%;
+            }
+        }
+    }
+    tbody {
+        overflow-y: auto;
+        flex-grow: 1;
+        height: 55vh;
+
+        td {
+            &:nth-child(1) {
+                width: 1%;
+            }
+            &:nth-child(2) {
+                width: 20%;
+            }
+            &:nth-child(3) {
+                width: 20%;
+            }
+            &:nth-child(4) {
+                width: 15%;
+            }
+            &:nth-child(5) {
+                width: 10%;
+            }
+            &:nth-child(6) {
+                width: 16%;
+            }
+            &:nth-child(7) {
+                width: 16%;
+            }
+        }
+    }
+    tfoot {
+        display: flex;
+        flex: 1 0 100%
+        tr {
+            width: 100vw;
+            flex: 1 0 100%;
+
+        }
+        td {
+            width: 100vw;
+            flex: 1 0 100%;
+
+        }
+    }
+}
